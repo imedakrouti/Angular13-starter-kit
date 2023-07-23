@@ -1,0 +1,13 @@
+<div class="container my-5">
+  <div class="row justify-content-between">
+      <ng-container *ngFor="let book of books">
+        <div class="col-md-3">
+        <app-book [book]="book" (bookEmitter)="addBook($event)"></app-book>
+      </div>
+       </ng-container>
+
+    </div>
+
+  </div>
+
+

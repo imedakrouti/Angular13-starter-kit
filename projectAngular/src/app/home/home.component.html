@@ -1,0 +1,33 @@
+<p>home works!</p>
+<p [ngClass]="{active :isActive}">{{ title }}</p>
+<p [ngClass]="isActive ? 'active' : 'inactive'">{{ title }}</p>
+Single class binding
+<p [class.active]="isActive">{{ title }}</p>
+<p [class.inactive]="isActive">{{ title }}</p>
+Class expression binding
+<p [class]="isActive ? 'active' : 'inactive'">{{ title }}</p>
+<p [classList]="isActive ? 'active' : 'inactive'  ">{{ title }}</p>
+Multi-class binding object
+<p [class]="{active:isActive , inactive:isInActive}">{{ title }}</p>
+
+Style binding
+Single Style binding
+<p [style.height]="height">{{ title }}</p>
+Multiple Style binding
+<p [style]="{
+    width:'100px',
+    height:'100px'
+}">Multiple Style binding</p>
+<p [style]="styleExpression"> Multiple Style binding</p>
+two data binding
+<div class="container d-flex justify-content-center">
+    <div class="col-md-8">
+        <div class="mb-3">
+            <label for="" class="form-label">UserName</label>
+            <input class="form-control" id="" type="text" placeholder="" aria-label=""[(ngModel)]="username">
+        </div>
+       <p class="my-5 p-4 text-lead bg-success d-inline-block">{{  username  }}</p>
+    </div>
+    <button class="btn btn-outline-primary" (click)="signOut()">Log out</button>
+
+</div>

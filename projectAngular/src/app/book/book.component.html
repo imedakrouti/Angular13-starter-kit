@@ -1,0 +1,10 @@
+
+<div class="card">
+     <div class="card-body">
+         <img [src]="book.image" class="card-img-top" alt="...">
+         <h5 class="card-title">{{ book.name }}</h5>
+         <p class="card-text">{{ book.amount |currency:'DT' }}.</p>
+         <button class="btn btn-primary"(click)="addToCart()">Add To Cart</button>
+     </div>
+</div>
+
